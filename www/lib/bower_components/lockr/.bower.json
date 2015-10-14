@@ -1,0 +1,35 @@
+{
+  "name": "lockr",
+  "version": "0.8.2",
+  "ignore": [
+    "**/.*",
+    "**/_*",
+    "node_modules",
+    "specs",
+    "libs",
+    "*.md",
+    "Gruntfile.js",
+    "package.json",
+    "bower.json"
+  ],
+  "devDependencies": {
+    "jasmine": "~1.3.1"
+  },
+  "keywords": [
+    "lockr",
+    "localStorage",
+    "webapps"
+  ],
+  "main": "./lockr.js",
+  "homepage": "https://github.com/tsironis/lockr",
+  "_release": "0.8.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.8.2",
+    "commit": "da303fec031319832574634fdb6e02963d6c18b2"
+  },
+  "_source": "git://github.com/tsironis/lockr.git",
+  "_target": "~0.8.2",
+  "_originalSource": "lockr",
+  "_direct": true
+}

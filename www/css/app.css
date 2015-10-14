@@ -1,0 +1,69 @@
+/* base.css overrides */
+.navbar-brand,
+.navbar-nav > li > a {
+    line-height: 64px;
+    height: 64px;
+    padding-top: 0;
+}
+
+.viewer {
+    height: 100%;
+    overflow: hidden;
+}
+
+.navbar-spinning-img {
+    position:relative;
+    top: 16px;
+}
+
+.home-panel {
+    padding: 0
+}
+
+.ul-models {
+    overflow: auto;
+    height: 800px;
+    margin: 0px 0;
+}
+
+.app-api-doc ul {
+    margin: 0px 0;
+}
+
+.li-models {
+    list-style-type: none;
+    margin: 0px 0;
+}
+
+.app-api-doc li {
+    margin: 0px 0;
+}
+
+.row-models-odd {
+    padding: 10px;
+    background-color: rgba(162, 201, 134, 0.41);
+}
+
+.row-models-even {
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+
+#webGLDiv {
+    width:100%;
+    height:200px;
+    position: absolute;
+}
+
+.modalbk {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: #00b3ee;
+}
+
+.gallery-modal-dlg-content {
+
+    overflow:auto;
+    background-color: #00b3ee;
+}
