@@ -116,7 +116,10 @@ var viewerView = React.createClass({
                 pathInfoCollection);
 
               var viewerConfig = {
-                viewerType: 'GuiViewer3D'
+                lightPreset: 8,
+                viewerType: 'GuiViewer3D',
+                qualityLevel: [false, true],
+                progressiveRendering: false
               }
 
               self.viewer = viewerFactory.createViewer(

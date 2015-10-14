@@ -190,7 +190,7 @@ Autodesk.ADN.Viewing.Extension.StateManager = function (viewer, options) {
     $(this.container).css({
       'right':'0px',
       'top':'0px',
-      'width':'380px',
+      'width':'345px',
       'height':'400px',
       'min-width':'10px',
       'min-height':'10px',

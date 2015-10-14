@@ -286,11 +286,14 @@ Autodesk.ADN.Viewing.Extension.ExtensionManager = function (viewer, options) {
           "Extensions Manager",
           {shadow:true});
 
-        this.container.style.top = "0px";
-        this.container.style.left = "0px";
+        var w = viewer.container.clientWidth;
+        var h = viewer.container.clientHeight;
 
-        this.container.style.width = "300px";
-        this.container.style.height = "400px";
+        this.container.style.top = "10px";
+        this.container.style.left = "10px";
+
+        this.container.style.width = Math.min(w * 75/100, 280) + 'px',
+        this.container.style.height = Math.min(h * 75/100, 400) + 'px',
 
         this.container.style.resize = "auto";
 
@@ -338,8 +341,12 @@ Autodesk.ADN.Viewing.Extension.ExtensionManager = function (viewer, options) {
             if(extension.enabled) {
                 $('#' + extension.itemId).addClass('enabled');
             }
-        };
+        }
 
+        /////////////////////////////////////////////
+        //
+        //
+        /////////////////////////////////////////////
         this.clearExtensions = function () {
 
             $('#' + baseId + 'PanelContainerId > div').each(
@@ -347,6 +354,32 @@ Autodesk.ADN.Viewing.Extension.ExtensionManager = function (viewer, options) {
                   $(child).remove();
               }
             );
+        }
+
+        /////////////////////////////////////////////
+        // onTitleDoubleClick override
+        //
+        /////////////////////////////////////////////
+        var _isMinimized = false;
+
+        this.onTitleDoubleClick = function (event) {
+
+            _isMinimized = !_isMinimized;
+
+            if(_isMinimized) {
+
+                $(this.container).css({
+                    'height': '34px',
+                    'min-height': '34px'
+                });
+            }
+            else {
+                $(this.container).css({
+                    'height': '200px',
+                    'min-height': Math.min(
+                      viewer.container.clientHeight * 75/100, 400) + 'px'
+                });
+            }
         };
 
         /////////////////////////////////////////////
@@ -361,7 +394,7 @@ Autodesk.ADN.Viewing.Extension.ExtensionManager = function (viewer, options) {
 
                 var $item = $(this);
 
-                if(!filter.length || $item.text().indexOf(filter) > 0) {
+                if(!filter.length || $item.text().toLowerCase().indexOf(filter.toLowerCase()) > 0) {
 
                     $item.css({
                         'display':'block'
