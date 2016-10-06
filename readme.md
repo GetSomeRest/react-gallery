@@ -1,3 +1,5 @@
+# Deprecated sample - not maintained anymore (Summer 2016)
+
 # ReactJS w. RefluxJS View&Data Gallery
 
 > A sample web application for View&Data with uni-directional dataflow application architecture inspired by ReactJS [Flux](http://facebook.github.io/react/blog/2014/05/06/flux.html)
